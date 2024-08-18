@@ -1,373 +1,240 @@
 <html>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <head>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-        <link rel="stylesheet" href="style2.css">
-        <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <head></head>
+    <style>
+        body{
+            margin: 0;
+            background: url("animation.jpg") no-repeat center center / cover;
+        }
+        
+        
+ .navbar{
+    display: flex;
+     align-items: center;  /* vertical set items*/
+     justify-content: space-between;/* evenly set spaces*/
+    background-color:rgba(11, 8, 8, 0.0) ;
+    position: fixed;/* fic navbar position*/
+    padding: 10px 10px;
+    width:100%;
+    top: 0;/*position of navbar*/
+    z-index: 1000;/*ensure navbar appear above to others elements*/
 
-  <link rel="icon" type="image/x-icon" href="icon.png" />
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-    </head>
-            <body>
-              <nav class="navbar">
-                <div class="logo-container">
-                    <a href="/Home.html"><img src="logo.png" alt="Logo" class="logo" data-aos="flip-down"></a>
-                    <div class="website-name">Sepia</div>
+
+ }
+ 
+  .logo-container{
+    display: flex;
+    align-items: center;
+    margin-left: 1cm;
+   
+ }
+ .logo{
+    height: 50px;
+ 
+    margin-right: 5px;
+    border-radius: 50%;
+}
+@keyframes moveAndDisappear {
+    0% {
+        opacity: 1; /* Fully visible */
+        transform: translateY(0); /* Original position */
+    }
+    50% {
+        opacity: 0; /* Invisible */
+        transform: translateY(-20px); /* Move up slightly */
+    }
+    100% {
+        opacity: 1; /* Back to visible */
+        transform: translateY(0); /* Return to original position */
+    }
+}
+
+.website-name {
+    animation: moveAndDisappear 3s ease-in-out; /* Animation properties */
+
+    font-size: 26px;
+    font-weight: bold;
+    font-style: italic;
+    margin-left: 10%;
+    text-align: left;
+    color: aliceblue;
+
+}
+ .center-container{
+    flex-grow: 1;/* allow center menu to grow and occupy available space*/
+    display: flex;
+    justify-content: center;
+ }
+ .search-container{
+    display: flex;
+    align-items: center;
+ }
+ .search-input{
+    padding:7px 25px;
+    font-size: 19px;
+    border-radius: 8px 0 0 8px;
+    border:1px solid #ccc;
+    outline: none;/*remove default outline*/
+
+
+ }
+ .search-btn{
+    border: 1px solid #ccc; /* Light gray border around the button */
+    border-left: none; /* No left border to merge with the input */
+    border-radius: 0 2px 2px 0; /* Rounded corners on the right */
+    background: white; /* White background for the button */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    padding: 10px; /* Padding for a better clickable area */
+    transition: background-color 0.3s, transform 0.1s; /* Smooth transition */
+}
+.search-btn:active {
+    background-color: rgba(51, 41, 41, 0.9); /* Change background on press */
+    transform: scale(0.95); /* Slightly scale down the button */
+}
+
+.search-btn img {
+    height: 20px; /* Set the height of the search icon inside the button */
+}
+.right-container {
+    display: flex; /* Use flexbox to align items horizontally */
+    align-items: center; /* Center items vertically */
+    margin-right: 1cm;
+   
+}
+
+/* Dropdown styling */
+.dropdown {
+    position: relative;
+    display: inline-block;
+    margin-right: 10px; /* Margin to space out elements */
+}
+
+.dropbtn {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 10px 15px; 
+    color:aliceblue ;
+    text-decoration: underline;
+    font-weight: bold;/* Adjusted padding for increased height */
+    
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block; /* Show dropdown content on hover */
+}
+
+.signup-btn, .profile-icon {
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    padding: 10px 15px; /* Adjusted padding for increased height */
+    cursor: pointer;
+    background: white;
+    margin-left: 10px;
+    margin-right: 1cm;
+}
+
+.profile-icon img {
+    height: 30px;
+    border-radius: 50%;
+}
+.center-section {
+    display: flex; /* Use flexbox to center the nav */
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+    height: 60px; /* Adjust height as needed */
+    background: rgba(255, 255, 255, 0.0); /* Transparent background */
+    position: relative; /* Keep it positioned below the navbar */
+    margin-top: 5cm; /* Space between navbar and this section */
+}
+
+.center-nav {
+    display: flex; /* Use flexbox for the nav items */
+    gap: 20px; /* Space between nav links */
+}
+
+.center-nav a {
+    text-decoration: none; /* Remove underline from links */
+    color: aliceblue; /* Text color */
+    font-size: 22px; /* Font size for links */
+    padding: 10px 20px; /* Padding for clickable area */
+    transition: background-color 0.3s; /* Smooth transition for background */
+}
+
+.center-nav a:hover {
+    background-color: rgba(0, 0, 0, 0.1); /* Change background on hover for better UX */
+    border-radius: 3px; /* Slightly rounded corners on hover */
+}
+
+
+
+
+
+
+ 
+    </style>
+    <body>
+        <nav class="navbar">
+            <div class="logo-container" data-aos="zoom-in">
+            <img src="navlogo.png"  alt="logo" class="logo" >
+            <div class="website-name">Sepia</div>
+            </div>
+            <div class="center-menu">
+                <div class="search-container">
+                    <input type="text"class="search-input"placeholder="search...">
+                    <button class="search-btn">
+                        <img src="search.gif" alt="search">
+                    </button>
                 </div>
-                <button class="navbar-toggler" onclick="toggleMenu()">☰</button>
-                <div class="right-menu">
-                  <div class="explore-dropdown" data-aos="fade-down">
-                      <a href="/explore.html" class="explore-link" >Explore</a>
-                      <div class="dropdown-content">
-                          <a href="/videos.html">Videos</a>
-                          <a href="/photos.html">Photos</a>
-                          <a href="/gifs.html">Gifs</a>
-                      </div>
-                  </div>
-            
+
+            </div>
+            <div class="right-container">
+                <div class="dropdown">
+                    <button class="dropbtn">Explore</button>
+                    <div class="dropdown-content">
+                        <a href="#">Videos</a>
+                        <a href="#">Blogs</a>
+                        <a href="#">Stickers</a>
+                    </div>
                 
-                    <button class="signup-btn"  data-aos="flip-down">Sign Up</button>
-                    <!-- After sign-up, replace the above button with the following -->
-                    <!-- <div class="profile-icon"><img src="user-profile-icon.png" alt="User Profile"></div> -->
-                </div>
-            </nav>
-                
-            
-               
-            <script>
-            
-            function toggleMenu() {
-                const rightMenu = document.querySelector('.right-menu');
-                rightMenu.classList.toggle('show');
-            }   
-                document.querySelector('.signup-btn').addEventListener('click', function() {
-                        this.style.display = 'none';
-                        let profileIcon = document.createElement('div');
-                        profileIcon.className = 'profile-icon';
-                        profileIcon.innerHTML = '<img src="user-profile-icon.png" alt="User Profile">';
-                        document.querySelector('.right-menu').appendChild(profileIcon);
-                    });
-            
-                    // JavaScript to toggle dropdown visibility on click
-                    document.querySelector('.dropbtn').addEventListener('click', function() {
-                        var dropdownContent = this.nextElementSibling;
-                        dropdownContent.style.display = dropdownContent.style.display === 'block' ? 'none' : 'block';
-                    });
-            
-                    // Close the dropdown if the user clicks outside of it
-                    window.onclick = function(event) {
-                        if (!event.target.matches('.dropbtn')) {
-                            var dropdowns = document.getElementsByClassName("dropdown-content");
-                            for (var i = 0; i < dropdowns.length; i++) {
-                                var openDropdown = dropdowns[i];
-                                if (openDropdown.style.display === 'block') {
-                                    openDropdown.style.display = 'none';
-                                }
-                            }
-                        }
-                    }
-                    
-                    setInterval(() => {
-                const websiteName = document.querySelector('.website-name');
-                websiteName.style.animation = 'none'; // Reset animation
-                // Trigger reflow to restart the animation
-                websiteName.offsetHeight; // Trigger reflow
-                websiteName.style.animation = 'moveAndDisappear 3s ease-in-out'; // Restart animation
-            }, 100); // 10000 milliseconds = 10 seconds
-            </script>
-       
-
-        <div class="slider">
-
-
-          <div class="list">
-            <div class="item">
-              <img src="./White/white4.webp" alt="">
-
-              <div class="content">
-                  <div class="title">WILD LIFE</div>
-                  <div class="type">FAUNA</div>
-                  <div class="description">
-                      "Wildlife is something which man cannot construct. Once it is gone, it is gone forever."
-                      -Joy Adamson.
-                  </div>
-                  <div class="button">
-                      <button>SEE MORE</button>
-                  </div>
-              </div>
-          </div>
-
-          <div class="item">
-            <img src="sepia/Spring/spring7.webp" alt="">
-
-            <div class="content">
-                <div class="title">NATURE</div>
-                <div class="type">FLORA</div>
-                <div class="description">
-                    "No other life is as pure as the plants. It is no wonder we cannot understand them."
-                </div>
-                <div class="button">
-                    <button>SEE MORE</button>
-                </div>
+            </div>
             </div>
         </div>
-
-
-  
-              <div class="item">
-                  <img src="sepia/Red/red8.jpg" alt="">
-  
-                  <div class="content">
-                      <div class="title">MARINE LIFE</div>
-                      <div class="type">FISHES</div>
-                      <div class="description">
-                          "We are like islands in the sea, separate on the surface but connected in the deep." -William James.
-                      </div>
-                      <div class="button">
-                          <button>SEE MORE</button>
-                      </div>
-                  </div>
-              </div>
-  
-              <div class="item">
-                  <img src="sepia/Photoshoot/photoshoot2.jpeg" alt="">
-  
-                  <div class="content">
-                      <div class="title">FASHION</div>
-                      <div class="type">SHOOT</div>
-                      <div class="description">
-                          Fashion is just another accessory for someone with great style. 
-                      </div>
-                      <div class="button">
-                          <button>SEE MORE</button>
-                      </div>
-                  </div>
-              </div>
-  
-              <div class="item">
-                  <img src="sepia/Green/green1.jpeg" alt="">
-  
-                  <div class="content">
-                      <div class="title">MAGIC</div>
-                      <div class="type">PLANT</div>
-                      <div class="description">
-                          Green is the prime color of the world and that from which its loveliness arises. -Pedro Calderon De La Barca
-                      </div>
-                      <div class="button">
-                          <button>SEE MORE</button>
-                      </div>
-                  </div>
-              </div>
-  
-              <div class="item">
-                  <img src="sepia/Background/background2.avif" alt="">
-  
-                  <div class="content">
-                      <div class="title">MAGIC</div>
-                      <div class="type">NATURE</div>
-                      <div class="description">
-                          Chill breeze, Warn sun, Green leaves, it's only and only peace.
-                      </div>
-                      <div class="button">
-                          <button>SEE MORE</button>
-                      </div>
-                  </div>
-              </div>
-  
-          </div>
-  
-  
-          <div class="thumbnail">
-            <div class="item">
-              <img src="./White/white4.webp" alt="">
-          </div>
-          <div class="item">
-            <img src="sepia/Spring/spring7.webp" alt="">
-        </div>
-          
-  
-              <div class="item">
-                  <img src="sepia/Red/red8.jpg" alt="">
-              </div>
-              <div class="item">
-                  <img src="sepia/Photoshoot/photoshoot2.jpeg" alt="">
-              </div>
-              <div class="item">
-                  <img src="sepia/Green/green1.jpeg" alt="">
-              </div>
-              <div class="item">
-                  <img src="sepia/Background/background2.avif" alt="">
-              </div>
-  
-          </div>
-  
-  
-          <div class="nextPrevArrows">
-              <button class="prev"> </button>
-              <button class="next"> > </button>
-          </div>
-  
-  
-      </div>
-
-
-      
+        <button class="signup-btn">Sign Up</button>
+    </div>
+        </nav>
         <section class="center-section">
             <nav class="center-nav">
-                <a href="/Home.html"><p data-aos="flip-left">Home</p></a>
-                <a href="#"><p data-aos="flip-left">Videos</p></a>
-                <a href="#"><p data-aos="flip-left">Favorites</p></a>
+                <a href="#">Home</a>
+                <a href="#">Videos</a>
+                <a href="#">Favorites</a>
             </nav>
-            </section>
-            <p class="center-para"data-aos="fade-left">Discover the best of Sepia</p>
-            
-            <p class="side-para" data-aos="fade-right">Popular Collection</p>
-            <div class="hover07 ">
-              <div>
-                <figure><a href="sepia/Photoshoot/photoshoot1.webp"><img data-aos="flip-left" src="sepia/Photoshoot/photoshoot1.webp" /></a></figure>
-                <a class="hover07-content" href="/photoshoot.html"><p >Photoshoot</p></a>
-              </div>
-              <div>
-                <figure><a href="sepia/Devotion/devotion5.webp"><img data-aos="flip-left" src="sepia/Devotion/devotion5.webp" /></a></figure>
-                <a class="hover07-content" href="/devotion.html"><p class="hover07-content">Devotion</p></a>
-              </div>
-              <div>
-                <figure><img data-aos="flip-left" src="sepia/Spring/spring3.jpeg" /></figure>
-                <p class="hover07-content">Spring</p>
-              </div>
-              <div>
-                <figure><img data-aos="flip-left" src="sepia/Ocean/ocean2.jpeg" /></figure>
-                <p class="hover07-content">Ocean</p>
-              </div>
-            </div>
-    
-              <p class="side-para2"  data-aos="fade-right">Background & Cover Photos</p>
-              <div class="hover05">
-                <div>
-                  <figure><a href="sepia/Background/background1.jpg"><img class="background1" src="sepia/Background/background1.jpg" /></a></figure>
-                  
-                </div>
-                <div>
-                  <figure><a href="sepia/Background/background7.jpeg"><img class="background1" src="sepia/Background/background7.jpeg" /></a></figure>
-                  
-                </div>
-                <div>
-                  <figure><a href="sepia/Background/background3.jpg"><img  class="background1" src="sepia/Background/background3.jpg"/></a></figure>
-            
-                </div>
-                <div>
-                  <figure><a href="sepia/Background/background6.jpeg"><img class="background1" src="sepia/Background/background6.jpeg" /></a></figure>
-                  
-                </div>
-                <div>
-                  <figure><a href="sepia/Background/background10.jpeg"><img class="background1" src="sepia/Background/background10.jpeg" /></a></figure>
-                  
-                </div>
-                <div>
-                  <figure><a href="sepia/Background/background8.jpeg"><img class="background1" src="sepia/Background/background8.jpeg" /></a></figure>
-                  
-                </div>
-                <div>
-                  <figure><a href="sepia/Background/background9.jpeg"><img class="background1" src="sepia/Background/background9.jpeg" /></a></figure>
-                  
-                </div>
-              </div>
-              
-              <p class="side-para3"  data-aos="fade-right">Dive into Colors</p>
-                  <div class="hover08 ">
-                       <div>
-                         <a><figure><img  src="sepia/Green/green2.webp" /></figure></a>
-                           <p class="span">Serene Green</p>
-                       </div>
-                       <div>
-                        <a><figure><img src="sepia/Orange/orange1.webp" /></figure></a>
-                        <p class="span">Orange kiss</p>
-                       </div>
-                       <div>
-                        <a><figure><img  src="sepia/Blue/blue4.jpeg" /></figure></a>
-                         <p class="span">Hydrating Blue</p>
-                      </div>
-                      <div>
-                        <a></a><figure><img src="./White/white1.webp" /></figure></a>
-                        <p class="span">Swan White</p>
-                     </div>
-                     <div>
-                      <a> <figure><img src="sepia/Red/red3.jpg" /></figure></a>
-                      <p class="span">Ruby Red</p>
-                   </div>
-
-                  </div>
-                
-                  <footer>
-                    <div class="footer-container">
-                      <div class="footer-section" data-aos="fade-left">
-                        <h3 >CodeGeeks</h3>
-                        <ul>
-                          <p  class="heading">Samar Gupta</p>
-                          <p class="heading">Riya Yadav</p>
-                          <p class="heading">Prachi Verma</p>
-                          <!-- <li><a href="#">Terms of Service</a></li> -->
-                        </ul>
-                      </div>
-                      <div class="footer-section" data-aos="fade-left">
-                        <h3 >Resources</h3>
-                        <ul>
-                          <p><a class="heading" href="#">video</video></a></p>
-                          <p><a class="heading" href="#">Pictures</a></p>
-                          <p><a class="heading" href="#">Gifs</a></p>
-                          <p><a class="heading" href="#">FAQ</a></p>
-                        </ul>
-                      </div>
-                      <div class="footer-section" data-aos="fade-left">
-                        <h3 >Contact</h3>
-                        <p class="heading">Email: codegeeksquery@gmail.com</p>
-                        <p class="heading">Phone: +91 9958650484</p>
-                      </div>
-                      <div class="footer-section" data-aos="fade-left">
-                        <h3 >Follow Us</h3>
-                        <div class="social-icons">
-                          <a href="#"><img  src="instagram.png" alt="Facebook">Instagram</a>
-                          <a href="#"><img class="LinkedIn" src="linkedin.png" alt="Twitter">LinkedIn</a>
-                          <a href="#"><img class="github" src="github.png" alt="LinkedIn">Github</a>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="footer-bottom">
-                      <p>&copy; 2024 Your Company. All rights reserved.</p>
-                    </div>
-                  </footer>
-                
-
-             
-              
-
-    
-
-              
-
-
-            
             <!-- <section class="card-section"> -->
                 <!-- <h2 class="section-heading">Discover Our best</h2> -->
-    
-            <!-- </section> -->
+                <!-- </section> -->
 
-            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-            crossorigin="anonymous"></script>
-        
-        
-            <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-            
-            <script>
-              AOS.init();
-            </script>
-        
-        
-        <script src="explore.js"></script>
 <script>
     setInterval(() => {
     const websiteName = document.querySelector('.website-name');
@@ -384,21 +251,3 @@
 </script>
     </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-<div class="center-menu">
-  <div class="search-container">
-      <input type="text"class="search-input"placeholder="search...">
-      <button class="search-btn">
-          <img src="search.gif" alt="search">
-      </button>
-  </div>
