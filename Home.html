@@ -1,0 +1,452 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css">
+  
+  <link href="https://fonts.googleapis.com/css2?family=Akronim&family=Dancing+Script:wght@400..700&family=Kalam:wght@300;400;700&family=Matemasie&display=swap" rel="style.css">
+
+
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Sepia</title>
+  
+  
+  
+
+  <link rel="icon" type="image/x-icon" href="icon.png" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="logo-container">
+        <a href="/Home.html"><img src="logo.png" alt="Logo" class="logo" data-aos="flip-down"></a>
+        <div class="website-name">Sepia</div>
+    </div>
+    <button class="navbar-toggler" onclick="toggleMenu()">☰</button>
+    <div class="right-menu">
+      <div class="explore-dropdown" data-aos="fade-down">
+          <a href="/explore.html" class="explore-link" >Explore</a>
+          <div class="dropdown-content">
+              <a href="/videos.html">Videos</a>
+              <a href="/photos.html">Photos</a>
+              <a href="/gifs.html">Gifs</a>
+          </div>
+      </div>
+
+    
+        <button class="signup-btn"  data-aos="flip-down">Sign Up</button>
+        <!-- After sign-up, replace the above button with the following -->
+        <!-- <div class="profile-icon"><img src="user-profile-icon.png" alt="User Profile"></div> -->
+    </div>
+</nav>
+    
+
+   
+<script>
+
+function toggleMenu() {
+    const rightMenu = document.querySelector('.right-menu');
+    rightMenu.classList.toggle('show');
+}   
+    document.querySelector('.signup-btn').addEventListener('click', function() {
+            this.style.display = 'none';
+            let profileIcon = document.createElement('div');
+            profileIcon.className = 'profile-icon';
+            profileIcon.innerHTML = '<img src="user-profile-icon.png" alt="User Profile">';
+            document.querySelector('.right-menu').appendChild(profileIcon);
+        });
+
+        // JavaScript to toggle dropdown visibility on click
+        document.querySelector('.dropbtn').addEventListener('click', function() {
+            var dropdownContent = this.nextElementSibling;
+            dropdownContent.style.display = dropdownContent.style.display === 'block' ? 'none' : 'block';
+        });
+
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function(event) {
+            if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                for (var i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.style.display === 'block') {
+                        openDropdown.style.display = 'none';
+                    }
+                }
+            }
+        }
+        
+        setInterval(() => {
+    const websiteName = document.querySelector('.website-name');
+    websiteName.style.animation = 'none'; // Reset animation
+    // Trigger reflow to restart the animation
+    websiteName.offsetHeight; // Trigger reflow
+    websiteName.style.animation = 'moveAndDisappear 3s ease-in-out'; // Restart animation
+}, 100); // 10000 milliseconds = 10 seconds
+</script>
+<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="front.jpg" class="d-block w-100 "   alt="...">
+        <div class="carousel-caption d-none d-md-block">
+            <!-- <div class="container py-5"></div> -->
+            <div class="row py-4"></div>
+            <div class="col-lg-7 pt-5 text-center">
+              <form class="d-flex justify-content-center align-items-center mb-4" style="position: relative;left: 200px; z-index: 10;">
+                <!-- <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"> -->
+                <input type="text"class="search-input"placeholder="search...">
+                <!-- <button class="btn btn-outline-success" type="submit"><i class="fas fa-search" src="search-icon.png"></i></button> -->
+                <button class="search-btn">
+                  <img src="search-icon.png" alt="search">
+              </button>
+              </form>
+            </div>
+            <div class="container" data-aos="fade-left">
+              <h2 >"To me, photography is an art of observation. It's about finding something interesting in an ordinary place..."</h2>
+            
+              <h5>"Creativity is a wild mind and a disciplined eye"</h5>
+            <p class="paragraph">Dorothy Parker</p>
+              </div>
+            
+            
+          <!-- <h5>First slide label</h5>
+          <p>Some representative placeholder content for the first slide.</p> -->
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="front2.jpg" class="d-block w-100 "  alt="...">
+        <div class="carousel-caption d-none d-md-block">
+            <!-- <div class="container py-5"></div> -->
+            <div class="row py-4"></div>
+            <div class="col-lg-7 pt-5 text-center">
+              <form class="d-flex justify-content-center align-items-center mb-4" style="position: relative;left: 200px; z-index: 10;">
+                <!-- <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"> -->
+                <input type="text"class="search-input"placeholder="search...">
+                <!-- <button class="btn btn-outline-success" type="submit"><i class="fas fa-search" src="search-icon.png"></i></button> -->
+                <button class="search-btn">
+                  <img src="search-icon.png" alt="search">
+              </button>
+              </form>
+            </div>
+            <div class="container" data-aos="fade-left">
+              <h2 >“In a world and a life that moves so fast, photography just makes the sound go out and it makes you stop and take a pause.” </h2>
+             
+               <h5>"A Good Snapshot keeps a moment from running away"</h5>
+            <p class="paragraph">Eudora Welty</p>
+            </div>
+            
+          <!-- <h5>Second slide label</h5>
+          <p>Some representative placeholder content for the second slide.</p> -->
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="front3.jpg" class="d-block w-100 "  alt="...">
+        <div class="carousel-caption d-none d-md-block">
+            <!-- <div class="container py-5"></div> -->
+             <div class="row py-4"></div>
+            <div class="col-lg-7 pt-5 text-center">
+              <form class="d-flex justify-content-center align-items-center mb-4" style="position: relative;left: 200px; z-index: 10;">
+                <!-- <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"> -->
+                <input type="text"class="search-input"placeholder="search...">
+                <!-- <button class="btn btn-outline-success" type="submit"><i class="fas fa-search" src="search-icon.png"></i></button> -->
+                <button class="search-btn">
+                  <img src="search-icon.png" alt="search">
+              </button>
+              </form>
+            </div>
+            <div class="container">
+              <h2>"When words become unclear, I shall focus with photographs. When images become inadequate, I shall be content with silence."</h2>
+            <h5>"Photography has nothing to do with camera"</h5>
+            <p class="paragraph">Lucas Gentry</p>
+          </div>
+            
+          <!-- <h5>Third slide label</h5>
+          <p>Some representative placeholder content for the third slide.</p> -->
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+
+  <div class="below" style="height: 100%;">
+    <div class="container2">
+      <div class="card__container">
+         <article class="card__article">
+            <img  data-aos="fade-right"src="scientific.webp" alt="image" class="card__img">
+
+            <div class="card__data">
+               <span class="card__description"><b>Scientific Collection, Canada</b></span>
+               <h2 class="card__title">The Great Science</h2>
+               <a href="#" class="card__button">Read More</a>
+            </div>
+         </article>
+
+         <article class="card__article">
+            <img data-aos="zoom-in" src="city.jpg" alt="image" class="card__img">
+
+            <div class="card__data">
+               <span class="card__description"><b>Leads, England</b></span>
+               <h2 class="card__title">City Street</h2>
+               <a href="#" class="card__button">Read More</a>
+            </div>
+         </article>
+
+         <article class="card__article">
+            <img  data-aos="fade-left" src="fashion.jpg" alt="image" class="card__img">
+
+            <div class="card__data">
+               <span class="card__description"><b>Fashion, Paris</b></span>
+               <h2 class="card__title">Emerged into Brands</h2>
+               <a href="#" class="card__button">Read More</a>
+            </div>
+         </article>
+         <article class="card__article">
+          <img  data-aos="fade-right" src="eagle.jpg" alt="image" class="card__img">
+
+          <div class="card__data">
+             <span class="card__description"><b>Bald Eagle, North America</b></span>
+             <h2 class="card__title">Birds of Prey</h2>
+             <a href="#" class="card__button">Read More</a>
+          </div>
+       </article>
+       <article class="card__article">
+        <img  data-aos="zoom-in" src="books.jpg" alt="image" class="card__img">
+
+        <div class="card__data">
+           <span class="card__description"><b>Books</b></span>
+           <h2 class="card__title">Open and lost in me</h2>
+           <a href="#" class="card__button">Read More</a>
+        </div>
+     </article>
+     <article class="card__article">
+      <img  data-aos="fade-left" src="rain.jpg" alt="image" class="card__img">
+
+      <div class="card__data">
+         <span class="card__description"><b>Lake Zurich, Switzerland</b></span>
+         <h2 class="card__title">The Lake embrace </h2>
+         <a href="#" class="card__button">Read More</a>
+      </div>
+   </article> 
+   <article class="card__article">
+    <img  data-aos="fade-right" src="bottle.jpeg" alt="image" class="card__img">
+
+    <div class="card__data">
+       <span class="card__description"><b>Oahu, Hawaii</b></span>
+       <h2 class="card__title">Bottled up affection</h2>
+       <a href="#" class="card__button">Read More</a>
+    </div>
+ </article> 
+ <article class="card__article">
+  <img  data-aos="zoom-in" src="friends.jpeg" alt="image" class="card__img">
+
+  <div class="card__data">
+     <span class="card__description"><b>Oslo, Norway</b></span>
+     <h2 class="card__title">Freeze the moments.</h2>
+     <a href="#" class="card__button">Read More</a>
+  </div>
+</article> 
+<article class="card__article">
+  <img  data-aos="fade-left" src="rafting.jpg" alt="image" class="card__img">
+
+  <div class="card__data">
+     <span class="card__description"><b>Costa Rica, Mexico</b></span>
+     <h2 class="card__title">conquring Fears.</h2>
+     <a href="#" class="card__button">Read More</a>
+  </div>
+</article> 
+
+
+
+
+      </div>
+   </div>
+    <div data-aos="fade-left" class="wrapper">
+    <div class="container3">
+        <input class="input1" type="radio" name="slide" id="c1" checked>
+        <label for="c1" class="card">
+            <div class="row1">
+                <div class="icon">1</div>
+                <div class="description">
+                    <h4>Marine Life</h4>
+                    <p>Let shell-ebrate a great dive.</p>
+                </div>
+            </div>
+        </label>
+        <input class="input1" type="radio" name="slide" id="c2" >
+        <label for="c2" class="card">
+            <div class="row1">
+                <div class="icon">2</div>
+                <div class="description">
+                    <h4>Adore Animal</h4>
+                    <p>All creatures are deserving of life.</p>
+                </div>
+            </div>
+        </label>
+        <input class="input1" type="radio" name="slide" id="c3" >
+        <label for="c3" class="card">
+            <div class="row1">
+                <div class="icon">3</div>
+                <div class="description">
+                    <h4>Sky High</h4>
+                    <p>Sernade of the skies.</p>
+                </div>
+            </div>
+        </label>
+        <input class="input1" type="radio" name="slide" id="c4" >
+        <label for="c4" class="card">
+            <div class="row1">
+                <div class="icon">4</div>
+                <div class="description">
+                    <h4>Outpouring</h4>
+                    <p>Nature's Shower- way better than yours</p>
+                </div>
+            </div>
+        </label>
+    </div>
+</div> 
+<marquee scrollamount="15" class="portrait-line">“A photographic portrait is a picture of someone who knows he is being photographed.”</marquee>
+<marquee scrollamount="15" direction="right" class="portrait-line"> “.are angels best their what know they before anyone photograph to like I”
+</marquee>
+<div data-aos="fade-right" class="container4">
+  <div class="row2">
+    <article  class="card__article1">
+      <img src="sepia/Devotion/devotion11.jpg" alt="image" class="card__img1">
+
+      <div class="card__data1">
+         <h3 class="card__title1">Bouddha Stupa<br>Kathmandu, Nepal</h3>
+         <span class="card__price1">$4</span>
+      </div>
+
+      <img src="sepia/Devotion/devotion11.jpg" alt="image" class="card__bg2">
+      
+      <a href="#" class="card__button1">
+         View More <i class="ri-arrow-right-line"></i>
+      </a>
+   </article>
+   <p data-aos="fade-left">“Peace comes from within.<br>Do not seek it without."<br>-Gautam Buddha </p>
+  </div>
+</div>
+<marquee scrollamount="15" class="portrait-line2">“Where moments become memories and memories become art.”</marquee>
+<div data-aos="fade-down" class="container5">
+  <div class="row3">
+    <article  class="card__article1">
+      <img src="./White/white7.jpeg" alt="image" class="card__img1">
+
+      <div class="card__data1">
+         <h3 class="card__title1">Bergen, Norway<br>Views that take my breath away.</h3>
+         <span class="card__price1">$4</span>
+      </div>
+
+      <img src="./White/white7.jpeg" alt="image" class="card__bg2">
+      
+      <a href="#" class="card__button1">
+         View More <i class="ri-arrow-right-line"></i>
+      </a>
+   </article>
+   <article  class="card__article1">
+    <img src="sepia/Spring/spring11.jpeg" alt="image" class="card__img1">
+
+    <div class="card__data1">
+       <h3 class="card__title1"> Osaka Castle Park, Japan <br>“Under the cherry blossom canopy, <br>dreams take flight like petals in the wind.” </h3>
+       <span class="card__price1">$4</span>
+    </div>
+
+    <img src="sepia/Spring/spring11.jpeg" alt="image" class="card__bg2">
+    
+    <a href="#" class="card__button1">
+       View More <i class="ri-arrow-right-line"></i>
+    </a>
+ </article>
+    
+
+  </div>
+</div>
+
+
+
+
+
+
+
+
+   
+    
+    <footer>
+      <div class="footer-container">
+        <div class="footer-section" data-aos="fade-left">
+          <img src="codegeeks.png" width="200" height="50">
+          <ul>
+            <p  class="heading">Samar Gupta</p>
+            <p class="heading">Riya Yadav</p>
+            <p class="heading">Prachi Verma</p>
+            <!-- <li><a href="#">Terms of Service</a></li> -->
+          </ul>
+        </div>
+        <div class="footer-section" data-aos="fade-left">
+          <h3 >Resources</h3>
+          <ul>
+            <p><a class="heading" href="#">video</video></a></p>
+            <p><a class="heading" href="#">Pictures</a></p>
+            <p><a class="heading" href="#">Gifs</a></p>
+            <p><a class="heading" href="#">FAQ</a></p>
+          </ul>
+        </div>
+        <div class="footer-section" data-aos="fade-left">
+          <h3 >Contact</h3>
+          <p class="heading">Email: codegeeksquery@gmail.com</p>
+          <p class="heading">Phone: +91 9958650484</p>
+        </div>
+        <div class="footer-section" data-aos="fade-left">
+          <h3 >Follow Us</h3>
+          <div class="social-icons">
+            <a href="#"><img  src="instagram.png" alt="Instagram">Instagram</a>
+            <a href="#"><img  src="linkedin.png" alt="LinkedIn">LinkedIn</a>
+            <a href="#"><img  src="github.png" alt="GitHub">Github</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Your Company. All rights reserved.</p>
+      </div>
+    </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <script>
+      AOS.init();
+    </script>
+
+
+
+
+</body>
+
+</html>

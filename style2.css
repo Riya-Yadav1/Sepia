@@ -1,0 +1,725 @@
+body{
+    margin: 0;
+    width: 100%;
+    /* background: rgba(15, 13, 13, 0.8); */
+    
+}
+
+.navbar {
+    display: flex;
+    align-items: center;  /* vertically align items */
+    justify-content: space-between; /* distribute space between items */
+    background-color: rgba(0, 0, 0, 0.1);
+    position: fixed; /* fix navbar position */
+    padding: 10px 20px;
+    box-sizing: border-box;
+    width: 100%;
+    top: 0; /* position of navbar */
+    z-index: 1000; /* ensure navbar appears above other elements */
+  }
+  
+  .logo-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar img.logo {
+    height: 60px;
+    margin-right: 10px;
+    border-radius: 50%;
+    animation: moveAndDisappear 3s ease-in-out;
+  }
+  
+  @keyframes moveAndDisappear {
+    0% {
+        opacity: 1; /* Fully visible */
+        transform: translateY(0); /* Original position */
+    }
+    50% {
+        opacity: 0; /* Invisible */
+        transform: translateY(-20px); /* Move up slightly */
+    }
+    100% {
+        opacity: 1; /* Back to visible */
+        transform: translateY(0); /* Return to original position */
+    }
+  }
+  
+  .website-name {
+    font-size: 30px;
+    font-style: italic;
+    font-weight: bold;
+    color: aliceblue;
+    animation: fadeInOut 5s infinite;
+  }
+  
+  @keyframes fadeInOut {
+    0%, 100% {
+        opacity: 1; /* Fully visible */
+    }
+    50% {
+        opacity: 0; /* Fully invisible */
+    }
+  }
+  
+  .right-menu {
+    display: flex;
+    align-items: center;
+    gap: 100px;
+  }
+  
+  .explore-dropdown {
+    position: relative;
+  }
+  
+  .explore-link {
+    color: aliceblue;
+    font-size: 40px;
+    font-weight: 600;
+    
+    cursor: pointer;
+    text-decoration: none;
+  }
+  
+  .explore-link:hover {
+    color: rgb(192, 191, 191);
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.3);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    top: 100%;
+    width: 150px;
+  }
+  
+  .explore-dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  .dropdown-content a {
+    color: aliceblue;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #a09d9d;
+  }
+  
+  .signup-btn, .profile-icon {
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    padding: 5px 10px;
+    cursor: pointer;
+    background: white;
+    color: #333; /* Set text color */
+    font-weight: bold;
+  }
+  
+  .profile-icon img {
+    height: 30px;
+    border-radius: 50%;
+  }
+  .navbar-toggler {
+    display: none;
+    font-size: 30px;
+    background: none;
+    border: none;
+    color: aliceblue;
+    cursor: pointer;
+    margin-left: auto;
+  }
+  @media screen and (max-width: 768px) {
+    .navbar-toggler {
+        display: block;
+    }
+  
+    .right-menu {
+        display: none; /* Initially hidden */
+    }
+  
+    .right-menu.show {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        padding: 10px;
+    }
+  }
+  
+
+
+  .center-section {
+    overflow: hidden;
+    width: 100%;
+display: flex;
+ /* Use flexbox to center the nav */
+justify-content: center; /* Center items horizontally */
+align-items: center; /* Center items vertically */
+height: 60px; /* Adjust height as needed */
+background: rgba(255, 255, 255, 0.0); /* Transparent background */
+position: relative; /* Keep it positioned below the navbar */
+margin-top: 2cm; /* Space between navbar and this section */
+}
+
+.center-nav {
+
+/* Use flexbox for the nav items */
+gap: 20px;
+text-align: center;
+display: flex; /* Space between nav links */
+}
+
+.center-nav a{
+    text-decoration: none;
+}
+.center-nav a p {
+ /* Remove underline from links */
+color: black;
+font-weight: 600; /* Text color */
+font-size: 27px; /* Font size for links */
+padding: 10px 20px; /* Padding for clickable area */
+transition: background-color 0.3s;
+/* Smooth transition for background */
+}
+
+.center-nav a p:hover {
+background-color: rgba(0, 0, 0, 0.1); /* Change background on hover for better UX */
+border-radius: 3px;
+/* Slightly rounded corners on hover */
+}
+.center-para{
+    overflow: hidden;
+    width: 100%;
+    color: black;
+    text-align: center;
+    margin-top: 1cm;
+    font-size: 50px;
+    font-weight: bold;
+}
+.side-para{
+    
+    overflow: hidden;
+    width: 100%;
+    margin-top: 1cm ;
+    color: black;
+    font-size: 40px;
+    font-weight: 500;
+    margin-left: 90px;
+}
+.line{
+    background: aliceblue;
+    border: 3px solid aliceblue;
+}
+
+.hover07{
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.hover07 figure img {
+    
+    border-radius: 50px;
+    margin-top:1cm;
+    height: 250px;
+    width: 290px;
+}
+
+.hover07-content {
+    color: black;
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: 450;
+}
+
+
+.hover05{
+   
+    width: 100%;
+    display: flex;
+    margin-top: 4cm;
+    
+  
+}
+.background1{
+  
+    border-radius: 20px;
+    height: 300px;
+    width:130px;
+}
+.hover05 figure img {
+    
+	margin-left: 70px;
+	-webkit-transform: scale(1.5);
+	transform: scale(1.5);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+.hover05 figure:hover img {
+	margin-left: 0;
+}
+.side-para2{
+    overflow: hidden;
+    width: 100%;
+    margin-top: 3cm;
+    color: black;
+    font-size: 40px;
+    font-weight: 500;
+    margin-left: 130px;
+}
+.side-para3{
+    overflow: hidden;
+    margin-top: 4cm;
+    color: black;
+    font-size: 40px;
+    font-weight: 500;
+    margin-left: 130px;
+}
+.hover08{
+    overflow: hidden;
+    margin-top: 1cm;
+    display: flex;
+    justify-content: space-around;
+}
+.hover08 figure img{
+    margin: 20px;
+    height: 250px;
+    width: 240px;
+    border-radius: 30px;
+    
+}
+
+
+.hover08 figure:hover img {
+    transform: scale(1.10);
+    transition: 1s ;
+	opacity: 1;
+	-webkit-animation: flash 1.5s;
+	animation: flash 1.5s;
+    
+}
+@-webkit-keyframes flash {
+	0% {
+		opacity: .4;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+@keyframes flash {
+	0% {
+		opacity: .4;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+.span{
+    font-weight: 400;
+    font-size: 30px;
+}
+
+footer {
+    overflow: hidden;
+    background: black;
+   margin-top: 2cm;
+    padding: 20px 0;
+    color: #343a40;
+    font-family: Arial, sans-serif;
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    
+  }
+  
+  .footer-section {
+    flex: 1;
+    margin: 20px;
+    min-width: 200px;
+  }
+  
+  .footer-section h3 {
+    text-decoration: 2px underline rgb(16, 151, 171);
+    margin-bottom: 10px;
+    color: rgb(16, 151, 171);
+    font-weight: 200;
+    font-size: 40px;
+  }
+  .heading{
+    color: white;
+    font-size: 18px;
+    font-style: oblique;
+  }
+  .footer-section ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .footer-section ul p {
+    margin-bottom: 8px;
+  }
+  
+  .footer-section ul p a {
+    text-decoration: none;
+    color:white;
+    
+  }
+  
+  .footer-section ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  .footer-section .social-icons{
+    display: flex;
+    justify-content: space-between;
+  }
+  .footer-section .social-icons a  {
+    margin-right: 10px;
+    color: white;
+    
+
+  }
+  .footer-section .social-icons a img{
+    height: 50px;
+    width: 50px;
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    padding: 10px 0;
+    background-color: white;
+    margin-top: 20px;
+    color: black;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  .slider{
+    width: 100%;
+    height: 100vh;
+    margin-top: -50px;
+    width: 100vw;
+
+    position: relative;
+    overflow: hidden;
+}
+.slider .list .item{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    inset: 0 0 0 0;
+}
+.slider .list .item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.slider .list .item .content{
+    position: absolute;
+    top: 20%;
+    width: 1140px;
+    max-width: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-right: 30%;
+    box-sizing: border-box;
+    color: #fff;
+    text-shadow: 0 5px 10px #0004;
+}
+
+.slider .list .item .content .title,
+.slider .list .item .content .type{
+    font-size: 5em;
+    font-weight: bold;
+    line-height: 1.3em;
+}
+.slider .list .item .type{
+    color: #14ff72cb;
+}
+.slider .list .item .description{
+    font-size: 20px;
+}
+.slider .list .item .button{
+    display: grid;
+    grid-template-columns: repeat(2, 130px);
+    grid-template-rows: 40px;
+    gap: 5px;
+    margin-top: 20px;
+}
+.slider .list .item .button button{
+    border: none;
+    background-color: #eee;
+    font-family: Poppins;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.4s;
+    letter-spacing: 2px;
+}
+
+
+.slider .list .item .button button:hover{
+    letter-spacing: 3px;
+}
+.slider .list .item .button button:nth-child(2){
+    background-color: transparent;
+    border: 1px solid #fff;
+    color: #eee;
+}
+
+
+
+
+
+/* Thumbnail Section  */
+.thumbnail{
+    overflow: hidden;
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    width: max-content;
+    z-index: 100;
+    display: flex;
+    gap: 20px;
+}
+
+.thumbnail .item{
+    width: 150px;
+    height: 220px;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.thumbnail .item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 5px 0 15px rgba(0, 0, 0, 0.3);
+}
+
+
+/* nextPrevArrows Section  */
+.nextPrevArrows{
+    position: absolute;
+    top: 80%;
+    right: 52%;
+    z-index: 100;
+    width: 300px;
+    max-width: 30%;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.nextPrevArrows button{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #14ff72cb;
+    border: none;
+    color: #fff;
+    font-family: monospace;
+    font-weight: bold;
+    transition: .5s;
+    cursor: pointer;
+}
+.nextPrevArrows button:hover{
+    background-color: #fff;
+    color: #000;
+}
+
+/* Animation Part */
+.slider .list .item:nth-child(1){
+    z-index: 1;
+}
+
+
+/* animation text in first item */
+.slider .list .item:nth-child(1) .content .title,
+.slider .list .item:nth-child(1) .content .type,
+.slider .list .item:nth-child(1) .content .description,
+.slider .list .item:nth-child(1) .content .buttons
+{
+    transform: translateY(50px);
+    filter: blur(20px);
+    opacity: 0;
+    animation: showContent .5s 1s linear 1 forwards;
+}
+@keyframes showContent{
+    to{
+        transform: translateY(0px);
+        filter: blur(0px);
+        opacity: 1;
+    }
+}
+.slider .list .item:nth-child(1) .content .title{
+    animation-delay: 0.4s !important;
+}
+.slider .list .item:nth-child(1) .content .type{
+    animation-delay: 0.6s !important;
+}
+.slider .list .item:nth-child(1) .content .description{
+    animation-delay: 0.8s !important;
+}
+.slider .list .item:nth-child(1) .content .buttons{
+    animation-delay: 1s !important;
+}
+
+
+
+
+/* Animation for next button click */
+.slider.next .list .item:nth-child(1) img{
+    width: 150px;
+    height: 220px;
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    border-radius: 30px;
+    animation: showImage .5s linear 1 forwards;
+}
+
+@keyframes showImage{
+    to{
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+    }
+}
+
+.slider.next .thumbnail .item:nth-last-child(1){
+    overflow: hidden;
+    animation: showThumbnail .5s linear 1 forwards;
+}
+.slider.prev .list .item img{
+    z-index: 100;
+}
+
+
+@keyframes showThumbnail{
+    from{
+        width: 0;
+        opacity: 0;
+    }
+}
+
+
+.slider.next .thumbnail{
+    animation: effectNext .5s linear 1 forwards;
+}
+
+@keyframes effectNext{
+    from{
+        transform: translateX(150px);
+    }
+}
+
+
+
+/* Animation for prev button click */
+.slider.prev .list .item:nth-child(2){
+    z-index: 2;
+}
+
+.slider.prev .list .item:nth-child(2) img{
+    animation: outFrame 0.5s linear 1 forwards;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+@keyframes outFrame{
+    to{
+        width: 150px;
+        height: 220px;
+        bottom: 50px;
+        left: 50%;
+        border-radius: 20px;
+    }
+}
+
+.slider.prev .thumbnail .item:nth-child(1){
+    overflow: hidden;
+    opacity: 0;
+    animation: showThumbnail .5s linear 1 forwards;
+}
+.slider.next .nextPrevArrows button,
+.slider.prev .nextPrevArrows button{
+    pointer-events: none;
+}
+
+
+.slider.prev .list .item:nth-child(2) .content .title,
+.slider.prev .list .item:nth-child(2) .content .type,
+.slider.prev .list .item:nth-child(2) .content .description,
+.slider.prev .list .item:nth-child(2) .content .buttons
+{
+    animation: contentOut 1.5s linear 1 forwards!important;
+}
+
+@keyframes contentOut{
+    to{
+        transform: translateY(-150px);
+        filter: blur(20px);
+        opacity: 0;
+    }
+}
+@media screen and (max-width: 678px) {
+    .slider .list .item .content{
+        padding-right: 0;
+    }
+    .slider .list .item .content .title{
+        font-size: 50px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

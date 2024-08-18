@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Devotion</title>
+    <link rel="stylesheet" href="devotion.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+        <div class="main">
+         <nav class="navbar">
+            <div class="logo-container">
+                <a href="/Home.html"><img src="logo.png" alt="Logo" class="logo" data-aos="flip-down"></a>
+                <div class="website-name">Sepia</div>
+            </div>
+            <button class="navbar-toggler" onclick="toggleMenu()">☰</button>
+            <div class="right-menu">
+              <div class="explore-dropdown" data-aos="fade-down">
+                  <a href="/explore.html" class="explore-link" >Explore</a>
+                  <div class="dropdown-content">
+                      <a href="/videos.html">Videos</a>
+                      <a href="/photos.html">Photos</a>
+                      <a href="/gifs.html">Gifs</a>
+                  </div>
+              </div>
+        
+            
+                <button class="signup-btn"  data-aos="flip-down">Sign Up</button>
+                <!-- After sign-up, replace the above button with the following -->
+                <!-- <div class="profile-icon"><img src="user-profile-icon.png" alt="User Profile"></div> -->
+            </div>
+        </nav>
+            
+        
+           
+        <script>
+        
+        function toggleMenu() {
+            const rightMenu = document.querySelector('.right-menu');
+            rightMenu.classList.toggle('show');
+        }   
+            document.querySelector('.signup-btn').addEventListener('click', function() {
+                    this.style.display = 'none';
+                    let profileIcon = document.createElement('div');
+                    profileIcon.className = 'profile-icon';
+                    profileIcon.innerHTML = '<img src="user-profile-icon.png" alt="User Profile">';
+                    document.querySelector('.right-menu').appendChild(profileIcon);
+                });
+        
+                // JavaScript to toggle dropdown visibility on click
+                document.querySelector('.dropbtn').addEventListener('click', function() {
+                    var dropdownContent = this.nextElementSibling;
+                    dropdownContent.style.display = dropdownContent.style.display === 'block' ? 'none' : 'block';
+                });
+        
+                // Close the dropdown if the user clicks outside of it
+                window.onclick = function(event) {
+                    if (!event.target.matches('.dropbtn')) {
+                        var dropdowns = document.getElementsByClassName("dropdown-content");
+                        for (var i = 0; i < dropdowns.length; i++) {
+                            var openDropdown = dropdowns[i];
+                            if (openDropdown.style.display === 'block') {
+                                openDropdown.style.display = 'none';
+                            }
+                        }
+                    }
+                }
+                
+                setInterval(() => {
+            const websiteName = document.querySelector('.website-name');
+            websiteName.style.animation = 'none'; // Reset animation
+            // Trigger reflow to restart the animation
+            websiteName.offsetHeight; // Trigger reflow
+            websiteName.style.animation = 'moveAndDisappear 3s ease-in-out'; // Restart animation
+        }, 100); // 10000 milliseconds = 10 seconds
+        </script>
+      
+</div>
+<div class="box">
+</div>
+<div class="content">
+    <span>Devotion is a place where you do not exist;  </span>
+    <span>life just flows through you as a certain sweetness and beauty. </span>
+    <span>  – Jaggi Vasudev</span>
+    </div>
+    </div>
+    <div class="line"></div>
+
+    <!-- first image -->
+
+    <section class="first">
+        <div data-aos="fade-right" class="firstcontent">
+  
+           <span>God is looking for relationship, not well-prepared speeches spoken from perfect motives.</span><br><br>
+           <span>“Prayer - in any form, by anybody - is God's invitation to pull up a chair to the table and enjoy restful, intimate, unbroken conversation with the triune God.”</span>
+  
+        </div>
+        <div data-aos="fade-left" class="firstimage">
+           <a href="11.jpg"><img src="11.jpg" alt="monks"></a>
+           
+        </div>
+     </section>
+  
+  
+   
+     <div class="line"></div>
+  
+  
+  <!-- second image -->
+  
+  
+  
+     <section class="first second">
+        <div data-aos="fade-right" class="firstimage">
+            <a href="sepia/Devotion/devotion12.jpeg"><img src="sepia/Devotion/devotion12.jpeg" alt="" ></a>
+    </div> 
+   
+        <div data-aos="fade-left" class="firstcontent secondcontent">
+  
+            <span>True strength lies in submission which permits one to dedicate his life, through devotion, to something beyond himself.</span><br><br>
+            <span>“True strength lies in submission which permits one to dedicate his life, through devotion, to something beyond himself.
+                ”</span>
+   
+         </div>
+  
+      
+    </section>
+    <div class="line"></div>
+  
+        
+       <!-- third image  -->
+  
+       <section class="first">
+        <div data-aos="fade-right" class="firstcontent">
+  
+            <span>"  Let God's grace be the mosque, and devotion the prayer mat. Let the Quran be the good conduct.</span><br><br>
+            <span>“ True strength lies in submission which permits one to dedicate his life, through devotion, to something beyond himself.
+                ”</span> 
+  
+        </div>
+        <div data-aos="fade-left" class="firstimage">
+           <a href="3.jpeg"><img src="3.jpeg" alt="quran"></a>
+           
+        </div>
+     </section>
+  
+  <!-- fourth image -->
+   
+     <div class="line"></div>
+     <section class="first second">
+        <div data-aos="fade-right" class="firstimage">
+            <a href="2.webp"><img src="2.webp" alt="" ></a>
+    </div> 
+   
+        <div data-aos="fade-left" class="firstcontent secondcontent">
+  
+            <span>"  True strength lies in submission which permits one to dedicate his life, through devotion, to something beyond himself.</span><br><br>
+            <span>“True strength lies in submission which permits one to dedicate his life, through devotion, to something beyond himself.
+                ”</span>
+   
+         </div>
+  
+      
+    </section>
+    <div class="line"></div>
+      
+    <footer>
+        <div class="footer-container">
+          <div class="footer-section" data-aos="fade-left">
+            <img src="codegeeks.png" width="200" height="50">
+            <ul>
+              <p  class="heading">Samar Gupta</p>
+              <p class="heading">Riya Yadav</p>
+              <p class="heading">Prachi Verma</p>
+              <!-- <li><a href="#">Terms of Service</a></li> -->
+            </ul>
+          </div>
+          <div class="footer-section" data-aos="fade-left">
+            <h3 >Resources</h3>
+            <ul>
+              <p><a class="heading" href="#">video</video></a></p>
+              <p><a class="heading" href="#">Pictures</a></p>
+              <p><a class="heading" href="#">Gifs</a></p>
+              <p><a class="heading" href="#">FAQ</a></p>
+            </ul>
+          </div>
+          <div class="footer-section" data-aos="fade-left">
+            <h3 >Contact</h3>
+            <p class="heading">Email: codegeeksquery@gmail.com</p>
+            <p class="heading">Phone: +91 9958650484</p>
+          </div>
+          <div class="footer-section" data-aos="fade-left">
+            <h3 >Follow Us</h3>
+            <div class="social-icons">
+              <a href="#"><img  src="instagram.png" alt="Instagram">Instagram</a>
+              <a href="#"><img  src="linkedin.png" alt="LinkedIn">LinkedIn</a>
+              <a href="#"><img  src="github.png" alt="GitHub">Github</a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2024 Your Company. All rights reserved.</p>
+        </div>
+      </footer>
+  
+  
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+      </script>
+</body>
+</html>
